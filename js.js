@@ -7,3 +7,19 @@ for (let i = 0; i < 5; i++) {
   b = c;
   console.log(c);
 }
+//------- one more-------------
+
+let counter = 0;
+function func(prevPrevNum, prevNum) {
+let sum = prevPrevNum + prevNum;
+prevPrevNum = prevNum;
+prevNum = sum;
+console.log(sum);
+
+counter++
+if (counter < 10) {
+func(prevPrevNum, prevNum);
+}
+};
+
+func(1, 2);
